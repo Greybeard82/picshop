@@ -1,18 +1,28 @@
 Rails.application.routes.draw do
-  get 'photos/index'
-  get 'photos/view'
-  get 'photos/create'
-  get 'photos/new'
-  get 'photos/create'
-  get 'photos/edit'
-  get 'photos/update'
-  get 'photos/destroy'
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/show'
-  get 'posts/edit'
-  get 'posts/update'
-  get 'posts/destroy'
+
+  resources :posts do
+    resources :photos
+  end
+
+
+  # get 'photos/index'
+  # get 'photos/show'
+  # get 'photos/create'
+  # get 'photos/new'
+  # post 'photos/create'
+  # get 'photos/edit'
+  # patch 'photos/update'
+  # delete 'photos/destroy'
+
+  # get 'posts/index'
+  # get 'posts/new'
+  # post 'posts/create'
+  # get 'posts/show'
+  # get 'posts/edit'
+  # patch 'posts/update'
+  # delete 'posts/destroy'
+
+  root 'posts#index'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,11 +1,12 @@
 class Photo < ApplicationRecord
   belongs_to :post
-  validates :name, presence: true,
-                    length: { minimum: 5 , maximum: 30 }
-            :url, presence: true,
-            :price, presence: true
+  validates :name, :url, :price, presence: true,
+  validates :name, length: { minimum: 5 , maximum: 30 }
 end
 
 
 # validates :title, presence: true,
 #                     length: { minimum: 5 }
+
+
+autants que je veux

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Faker::Name.name      #=> "Christophe Bartell"
+
+Faker::Internet.email #=> "kirsten.greenholt@corkeryfisher.info"
+
+50.times do
+  @post = Post.new title: Faker::Artist.name, text: Faker::Creature::Cat.breed
+  @post.save
+end
