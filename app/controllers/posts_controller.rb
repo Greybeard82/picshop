@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  http_basic_authenticate_with name: "picshop", password: "picshop", except: [:index, :show]
 
   def index
     @posts = Post.all
@@ -10,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(article_params)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to @post
     else
@@ -29,5 +30,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
