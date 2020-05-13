@@ -20,6 +20,14 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'faker'
 
+gem 'nokogiri'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'rspec-rails-matchers'
+end
+
 gem 'cloudinary', '~> 1.13', '>= 1.13.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
