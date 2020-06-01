@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # post 'posts/create'
   # get 'posts/show'
   # get 'posts/edit'
-  # patch 'posts/update'
+  # patch 'posts/update'
   # delete 'posts/destroy'
 
   root 'posts#index'
